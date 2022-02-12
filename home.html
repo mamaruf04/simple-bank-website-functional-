@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>bank page</title>
+</head>
+<body>
+    <section class="w-3/4 mx-auto">
+        <h1 class="text-4xl text-center mt-8 mb-8">Let's get some <span class="text-violet-600 font-medium">Mooooooney</span>!!</h1>
+        <section class="grid grid-cols-3 gap-4">
+            <div class="bg-blue-400 p-16 text-white rounded-md">
+                <h3 class="text-3xl">Deposit</h3>
+                <h2 class="text-4xl font-medium">$<span id="previous-diposite">00</span></h1>
+            </div>
+            <div class="bg-green-400 p-16 text-white rounded-md">
+                <h3 class="text-3xl">Withdraw</h3>
+                <h2 class="text-4xl font-medium">$<span id="previous-withdraw">00</span></h1>
+            </div>
+            <div class="bg-purple-400 p-16 text-white rounded-md">
+                <h3 class="text-3xl">Total Balance</h3>
+                <h2 class="text-4xl font-medium">$<span id="previous-total">1200</span></h1>
+            </div>
+        </section>
+        <section class="grid grid-cols-2 gap-4 mt-4">
+            <div class="bg-purple-400 p-10 rounded-md">
+                <h2 class="text-3xl mb-2">Please Deposite</h2>
+                <input class="block text-1xl px-4 py-2 mb-4 rounded-md" type="number" name="" placeholder="$Enter your amount" id="new-deposite">
+                <button id="deposite" class="border-md bg-indigo-500 px-4 py-2 text-white font-medium text-lg rounded-md">Comfirm</button>
+            </div>
+            <div class="bg-blue-400 p-10 rounded-md">
+                <h2 class="text-3xl mb-2">Please Withdraw</h2>
+                <input class="block text-1xl px-4 py-2 mb-4 rounded-md" type="number" name="" placeholder="$Enter your amount" id="new-withdraw">
+                <button id="withdraw" class="border-md bg-indigo-500 px-4 py-2 text-white font-medium text-lg rounded-md">Comfirm</button>
+            </div>
+        </section>
+    </section>
+    <script src="js/home.js"></script>
+</body>
+</html>
