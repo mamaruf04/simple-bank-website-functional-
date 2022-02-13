@@ -14,9 +14,8 @@ function inputField (inputId) {
     const amount = stringToFloat(inputAmountText);
     if(amount >= 0 ){ 
         return amount;
-    }
-    
-}
+    }  
+};
 // value catch from previous  and convert in to float number
 function previousAmount(previousAmountId) {
     const previousAmountField = document.getElementById(previousAmountId);
@@ -32,8 +31,7 @@ function totalValue(previousValueId, newValueId) {
     if (total >= 0){
         document.getElementById(previousValueId).innerText = total;
     }
-    
-}
+};
 // substraction new value from previous value 
 function restValue(previousValueId, newValueId) {
     const lastAmount = previousAmount(previousValueId);
@@ -51,6 +49,8 @@ document.getElementById('deposite').addEventListener('click',function() {
 // new withdraw amount
 document.getElementById('withdraw').addEventListener('click',function() {
     totalValue('previous-withdraw','new-withdraw');
-    restValue('previous-total', 'new-withdraw');
+    if(previousAmount('previous-total') >= inputField ('new-withdraw')){
+        restValue('previous-total', 'new-withdraw');
+    }
     makeFieldEmpty('new-withdraw');
-})
+})        
